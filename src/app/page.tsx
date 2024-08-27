@@ -6,7 +6,9 @@ import { Send } from "lucide-react";
 import Message from "./components/Messges";
 import { useRef } from "react";
 export default function Home() {
-  const { messages, handleSubmit, input, handleInputChange } = useChat();
+  const { messages, handleSubmit, input, handleInputChange } = useChat(
+    
+  );
   const formRef = useRef<HTMLFormElement>(null);
   function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey) {
